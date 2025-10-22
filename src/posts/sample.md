@@ -40,4 +40,4 @@ The counter is rendered inside markdown
 
 Media inside the **static** folder is served from `/`.
 
-![Svelte](/opm.png)
+![Svelte](/opm.png "an image of one punch man")

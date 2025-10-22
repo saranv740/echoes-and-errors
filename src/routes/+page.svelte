@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from "$app/paths";
 	import * as config from "$lib/config";
 	import { formatDate } from "$lib/utils";
 	import type { PageProps } from "./$types";
@@ -14,9 +15,14 @@
 
 <section>
 	<ul class="posts">
-		{#each data.posts as post}
+		{#each data.posts as post (post.title)}
 			<li class="post">
-				<a href={post.slug} class="title">{post.title}</a>
+				<a
+					href={resolve("/post/[slug]", {
+						slug: post.slug,
+					})}
+					class="title">{post.title}</a
+				>
 				<p class="date">{formatDate(post.date)}</p>
 				<p class="description">{post.description}</p>
 			</li>

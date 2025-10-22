@@ -6,7 +6,7 @@
 		loading: "lazy" | "eager";
 	};
 
-	let { src, title, alt, loading }: Props = $props();
+	let { src, title, alt, loading = "lazy" }: Props = $props();
 </script>
 
 <img {src} {alt} {title} {loading} />

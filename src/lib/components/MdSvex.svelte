@@ -1,6 +1,5 @@
 <script lang="ts" module>
-	import img from "./Image.svelte";
-	export { img };
+	export { default as img } from "./Image.svelte";
 </script>
 
 <script lang="ts">
