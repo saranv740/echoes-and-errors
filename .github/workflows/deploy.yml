@@ -35,6 +35,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             docker pull ${{ secrets.DOCKER_USERNAME }}/echoes-and-errors:latest
-            docker stop blog || true
-            docker rm blog || true
-            docker run --restart always --name blog -dp 3000:3000 ${{ secrets.DOCKER_USERNAME }}/echoes-and-errors:latest
+            docker stop echoes || true
+            docker rm echoes || true
+            docker run --restart always --name echoes -dp 3000:3000 ${{ secrets.DOCKER_USERNAME }}/echoes-and-errors:latest
