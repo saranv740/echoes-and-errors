@@ -15,32 +15,32 @@
 		"start": "node build"
 	},
 	"devDependencies": {
-		"@eslint/compat": "^1.4.0",
-		"@eslint/js": "^9.36.0",
-		"@sveltejs/adapter-node": "^5.4.0",
-		"@sveltejs/kit": "^2.43.2",
-		"@sveltejs/vite-plugin-svelte": "^6.2.0",
-		"@types/node": "^22",
-		"eslint": "^9.36.0",
+		"@eslint/compat": "^1.4.1",
+		"@eslint/js": "^9.39.3",
+		"@sveltejs/adapter-node": "^5.5.3",
+		"@sveltejs/kit": "^2.53.2",
+		"@sveltejs/vite-plugin-svelte": "^6.2.4",
+		"@types/node": "^22.19.12",
+		"eslint": "^9.39.3",
 		"eslint-config-prettier": "^10.1.8",
-		"eslint-plugin-svelte": "^3.12.4",
-		"globals": "^16.4.0",
+		"eslint-plugin-svelte": "^3.15.0",
+		"globals": "^16.5.0",
 		"mdsvex": "^0.12.6",
-		"prettier": "^3.6.2",
-		"prettier-plugin-svelte": "^3.4.0",
-		"svelte": "^5.39.5",
-		"svelte-check": "^4.3.2",
-		"typescript": "^5.9.2",
-		"typescript-eslint": "^8.44.1",
-		"vite": "^7.1.7"
+		"prettier": "^3.8.1",
+		"prettier-plugin-svelte": "^3.5.0",
+		"svelte": "^5.53.5",
+		"svelte-check": "^4.4.3",
+		"typescript": "^5.9.3",
+		"typescript-eslint": "^8.56.1",
+		"vite": "^7.3.1"
 	},
 	"dependencies": {
 		"@fontsource/atkinson-hyperlegible": "^5.2.8",
 		"@fontsource/jetbrains-mono": "^5.2.8",
 		"lucide-svelte": "^0.546.0",
-		"open-props": "^1.7.16",
+		"open-props": "^1.7.23",
 		"rehype-slug": "^6.0.0",
 		"remark-toc": "^9.0.0",
-		"shiki": "^3.13.0"
+		"shiki": "^3.23.0"
 	}
 }
