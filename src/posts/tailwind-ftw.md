@@ -47,7 +47,7 @@ To start using Tailwind CSS, follow these steps:
 
 Install Tailwind CSS via npm or yarn:
 
-```
+```bash
 npm install tailwindcss
 ```
 

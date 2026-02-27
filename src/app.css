@@ -112,6 +112,6 @@ html.dark {
 	}
 }
 
-.prose :is(ul, ol) {
+.prose :is(ul) {
 	list-style-type: "🔥";
 }

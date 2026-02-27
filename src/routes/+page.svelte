@@ -1,61 +1,34 @@
 <script lang="ts">
-	import { resolve } from "$app/paths";
-	import Button from "$lib/components/Button.svelte";
-	import * as config from "$lib/config";
-	import { formatDate } from "$lib/utils";
 	import type { PageProps } from "./$types";
+	import { siteConfig } from "$lib/config";
+	import PostPreview from "$lib/components/PostPreview.svelte";
 
 	let { data }: PageProps = $props();
+	const hero = siteConfig.hero;
 </script>
 
 <svelte:head>
 	<title>
-		{config.title}
+		{siteConfig.title}
 	</title>
 </svelte:head>
 
-<section>
-	<ul class="posts">
+<section class="mb-16 flex w-full flex-col gap-8 sm:mb-24">
+	{#if hero.title}
+		<h1 class="font-serif text-3xl leading-tight font-medium sm:text-5xl sm:leading-tight">
+			{hero.title}
+		</h1>
+	{/if}
+
+	{#if hero.text}
+		<div class="prose max-w-none sm:prose-lg">{hero.text}</div>
+	{/if}
+
+	<div class="mb-16 sm:mb-24">
+		<h2 class="mb-12 font-serif text-xl italic sm:mb-16 sm:text-2xl">Writings</h2>
 		{#each data.posts as post (post.title)}
-			<li class="post">
-				<a
-					href={resolve("/post/[slug]", {
-						slug: post.slug,
-					})}
-					class="title">{post.title}</a
-				>
-				<p class="date">{formatDate(post.date)}</p>
-				<p class="description">{post.description}</p>
-			</li>
+			<PostPreview {post} className="mb-10 sm:mb-12" headingLevel="h2" />
 		{/each}
-	</ul>
-	<Button text="View all" />
+		<div class="mt-12 sm:mt-16"></div>
+	</div>
 </section>
-
-<style>
-	.posts {
-		display: grid;
-		gap: var(--size-7);
-	}
-
-	.post {
-		max-inline-size: var(--size-content-3);
-		&:not(:last-child) {
-			border-bottom: 1px solid var(--border);
-			padding-bottom: var(--size-7);
-		}
-	}
-
-	.title {
-		font-size: var(--font-size-fluid-3);
-		text-transform: capitalize;
-	}
-
-	.date {
-		color: var(--text-2);
-	}
-
-	.description {
-		margin-top: var(--size-3);
-	}
-</style>

@@ -1,4 +1,4 @@
-import * as config from "$lib/config";
+import { siteConfig as config } from "$lib/config";
 import type { Post } from "$lib/types";
 import { getPosts } from "$lib/utils";
 
