@@ -4,7 +4,7 @@
 	import { resolve } from "$app/paths";
 </script>
 
-<nav>
+<nav class="relative min-h-10 pt-4 pb-12 sm:min-h-14 sm:pb-24 md:pt-8">
 	<a href={resolve("/")} class="title">
 		<b>{config.title}</b>
 	</a>
@@ -23,29 +23,3 @@
 
 	<Toggle />
 </nav>
-
-<style>
-	nav {
-		padding-block: var(--size-7);
-
-		@media (min-width: 768px) {
-			display: flex;
-			justify-content: space-between;
-		}
-
-		.links {
-			margin-block: var(--size-7);
-
-			@media (min-width: 768px) {
-				display: flex;
-				gap: var(--size-7);
-				margin-block: 0;
-			}
-		}
-
-		a {
-			color: inherit;
-			text-decoration: none;
-		}
-	}
-</style>

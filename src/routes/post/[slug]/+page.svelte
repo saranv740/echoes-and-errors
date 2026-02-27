@@ -17,8 +17,8 @@
 		<p>Published at: {formatDate(data.meta.date)}</p>
 	</hgroup>
 	<div class="tags">
-		{#each data.meta.categories as category (category)}
-			<span class="surface-4">&num;{category}</span>
+		{#each data.meta.tags as tag (tag)}
+			<span class="surface-4">&num;{tag}</span>
 		{/each}
 	</div>
 	<div class="prose">
