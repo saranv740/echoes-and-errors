@@ -2,6 +2,8 @@ import * as config from "$lib/config";
 import type { Post } from "$lib/types";
 import { getPosts } from "$lib/utils";
 
+export const prerender = true;
+
 export async function GET() {
 	const posts: Post[] = await getPosts();
 

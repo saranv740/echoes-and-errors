@@ -33,7 +33,8 @@
 		"svelte-check": "^4.4.3",
 		"typescript": "^5.9.3",
 		"typescript-eslint": "^8.56.1",
-		"vite": "^7.3.1"
+		"vite": "^7.3.1",
+		"vite-plugin-devtools-json": "^1.0.0"
 	},
 	"dependencies": {
 		"@fontsource/atkinson-hyperlegible": "^5.2.8",
