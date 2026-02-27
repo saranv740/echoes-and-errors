@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { resolve } from "$app/paths";
+	import Button from "$lib/components/Button.svelte";
 	import * as config from "$lib/config";
 	import { formatDate } from "$lib/utils";
 	import type { PageProps } from "./$types";
@@ -28,6 +29,7 @@
 			</li>
 		{/each}
 	</ul>
+	<Button text="View all" />
 </section>
 
 <style>
