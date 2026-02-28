@@ -20,7 +20,7 @@ export const siteConfig = {
 	url: dev ? "http://localhost:5173/" : "www.codebysaran.in",
 	navLinks,
 	hero: {
-		title: "Hi There & Welcome to My Corner of the Web!",
+		title: "Hi there & welcome to my corner of the web!",
 		text: "An Homo sapien who codes..."
 	},
 } satisfies SiteConfig;
