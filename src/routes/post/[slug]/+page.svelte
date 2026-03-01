@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { page } from "$app/state";
 	import Button from "$lib/components/Button.svelte";
+	import Head from "$lib/components/Head.svelte";
 	import { formatDate } from "$lib/utils";
 	import type { PageProps } from "./$types";
 
@@ -19,11 +21,7 @@
 	}
 </script>
 
-<svelte:head>
-	<title>{data.meta.title}</title>
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content={data.meta.title} />
-</svelte:head>
+<Head url={page.url} title={data.meta.title} description={data.meta.description} />
 
 <article class="mb-16 sm:mb-24">
 	<header class="mb-4">

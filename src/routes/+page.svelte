@@ -2,16 +2,14 @@
 	import type { PageProps } from "./$types";
 	import { siteConfig } from "$lib/config";
 	import PostPreview from "$lib/components/PostPreview.svelte";
+	import Head from "$lib/components/Head.svelte";
+	import { page } from "$app/state";
 
 	let { data }: PageProps = $props();
 	const hero = siteConfig.hero;
 </script>
 
-<svelte:head>
-	<title>
-		{siteConfig.title}
-	</title>
-</svelte:head>
+<Head url={page.url} />
 
 <section class="mb-16 flex w-full flex-col gap-8 sm:mb-24">
 	{#if hero.title}

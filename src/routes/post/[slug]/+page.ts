@@ -1,12 +1,14 @@
 import { error } from "@sveltejs/kit";
 import type { EntryGenerator, PageLoadEvent } from "./$types";
+import type { Post } from "$lib/types";
+import type { Component } from "svelte";
 
 export async function load({ params }: PageLoadEvent) {
 	try {
 		const post = await import(`$lib/contents/${params.slug}.md`);
 		return {
-			content: post.default,
-			meta: post.metadata,
+			content: post.default as Component,
+			meta: post.metadata as Post,
 		};
 	} catch (e) {
 		console.error(e);

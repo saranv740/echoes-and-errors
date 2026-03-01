@@ -21,6 +21,6 @@ export const siteConfig = {
 	navLinks,
 	hero: {
 		title: "Hi there & welcome to my corner of the web!",
-		text: "An Homo sapien who codes..."
+		text: "An Homo sapien who codes...",
 	},
 } satisfies SiteConfig;
