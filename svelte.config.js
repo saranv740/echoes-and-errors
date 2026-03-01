@@ -7,6 +7,7 @@ import { mdsvex } from "mdsvex";
 import { createHighlighter } from "shiki";
 import remarkToc from "remark-toc";
 import rehypeSlug from "rehype-slug";
+import { addCopyButton } from "shiki-transformer-copy-button";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -45,6 +46,7 @@ const mdSvexOptions = {
 				hlr.codeToHtml(code, {
 					lang,
 					theme: "tokyo-night",
+					transformers: [addCopyButton(code)],
 				}),
 			);
 
