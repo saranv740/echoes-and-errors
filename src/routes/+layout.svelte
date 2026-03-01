@@ -9,7 +9,7 @@
 	let { children, data }: { children: Snippet; data: LayoutData } = $props();
 </script>
 
-<div class="min-h-screen flex-col px-4 md:px-8 max-w-5xl mx-auto">
+<div class="min-h-screen flex-col px-4 max-w-3xl mx-auto">
 	<Header />
 	<main>
 		<Transition url={data.url}>

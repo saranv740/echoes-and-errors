@@ -26,12 +26,12 @@
 </svelte:head>
 
 <article class="mb-16 sm:mb-24">
-	<header class="mb-8">
+	<header class="mb-4">
 		<h1 class="font-serif text-3xl leading-tight font-medium sm:text-5xl sm:leading-tight">
 			{data.meta.title}
 		</h1>
 	</header>
-	<div class="mt-4 text-sm">
+	<div class="mb-4 text-sm">
 		<time>{formatDate(data.meta.date)}</time>
 	</div>
 	<div class="prose max-w-none sm:prose-lg">

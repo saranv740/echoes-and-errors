@@ -5,11 +5,11 @@ date: "2025-10-21"
 categories:
   - sveltekit
   - svelte
-published: false
+published: true
 ---
 
 <script>
-  import Counter from './components/Counter.svelte'
+  import Button from '../components/Button.svelte'
 </script>
 
 # Svelte
@@ -34,10 +34,12 @@ function greet(name: string) {
 
 The counter is rendered inside markdown
 
-<Counter />
+<Button type="button">Email</Button>
 
 ## Media
 
 Media inside the **static** folder is served from `/`.
 
 ![Svelte](/opm.png "an image of one punch man")
+
+<Button type="button">Email</Button>

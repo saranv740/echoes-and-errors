@@ -8,7 +8,7 @@ tags:
 published: true
 ---
 
-# How to make blog site using sveltekit ?
+### How to make blog site using sveltekit ?
 
 Just install mdsvex and follow the tutorial of [Joy Of Code](https://joyofcode.xyz/sveltekit-markdown-blog)
 

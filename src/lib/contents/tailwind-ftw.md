@@ -25,9 +25,9 @@ Tailwind CSS is a utility-first CSS framework created by Adam Wathan, Jonathan R
 
 2. **Customization:** Tailwind CSS is highly customizable. You can configure the framework to generate only the CSS you need, keeping your project's file size to a minimum.
 
-3. **Responsive Design:** Tailwind CSS makes it effortless to create responsive layouts. You can apply responsive classes to elements to control their appearance on different screen sizes.
+- **Responsive Design:** Tailwind CSS makes it effortless to create responsive layouts. You can apply responsive classes to elements to control their appearance on different screen sizes.
 
-4. **Extensibility:** The framework can be extended using plugins, allowing you to add custom utilities or integrate with third-party libraries seamlessly.
+- **Extensibility:** The framework can be extended using plugins, allowing you to add custom utilities or integrate with third-party libraries seamlessly.
 
 ## Why Choose Tailwind CSS?
 
