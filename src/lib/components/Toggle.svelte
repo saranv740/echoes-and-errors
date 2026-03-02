@@ -4,16 +4,18 @@
 	import { theme } from "$lib/components/Theme.svelte";
 </script>
 
-<button on:click={theme.toggle} aria-label="Toggle theme">
+<button
+	on:click={theme.toggle}
+	class="cursor-pointer"
+	aria-label={`Toggle ${theme.current === "dark" ? "light" : "dark"} theme`}
+>
 	{#if theme.current === "dark"}
 		<div in:fly={{ y: 10 }}>
 			<Sun />
-			<span>Light</span>
 		</div>
 	{:else}
 		<div in:fly={{ y: -10 }}>
 			<Moon />
-			<span>Dark</span>
 		</div>
 	{/if}
 </button>
@@ -26,10 +28,6 @@
 		border: none;
 		box-shadow: none;
 		overflow: hidden;
-
-		> * {
-			display: flex;
-			gap: var(--size-2);
-		}
+		vertical-align: middle;
 	}
 </style>

@@ -1,59 +1,37 @@
 <script lang="ts">
-	import { resolve } from "$app/paths";
-	import * as config from "$lib/config";
-	import { formatDate } from "$lib/utils";
 	import type { PageProps } from "./$types";
+	import { siteConfig } from "$lib/config";
+	import PostPreview from "$lib/components/PostPreview.svelte";
+	import Head from "$lib/components/Head.svelte";
+	import { page } from "$app/state";
+	import Button from "$lib/components/Button.svelte";
 
 	let { data }: PageProps = $props();
+	const hero = siteConfig.hero;
 </script>
 
-<svelte:head>
-	<title>
-		{config.title}
-	</title>
-</svelte:head>
+<Head url={page.url} />
 
-<section>
-	<ul class="posts">
+<section class="mb-12 flex w-full flex-col gap-12">
+	{#if hero.title}
+		<h1 class="font-serif text-3xl leading-tight font-medium sm:text-5xl sm:leading-tight">
+			{hero.title}
+		</h1>
+	{/if}
+
+	{#if hero.text}
+		<div class="prose max-w-none sm:prose-lg">
+			<p>
+				{hero.text}
+			</p>
+			<Button href="/about">About me</Button>
+		</div>
+	{/if}
+
+	{#if data.posts.length > 0}
+		<h2 class="font-serif text-xl italic sm:text-2xl">Writings</h2>
 		{#each data.posts as post (post.title)}
-			<li class="post">
-				<a
-					href={resolve("/post/[slug]", {
-						slug: post.slug,
-					})}
-					class="title">{post.title}</a
-				>
-				<p class="date">{formatDate(post.date)}</p>
-				<p class="description">{post.description}</p>
-			</li>
+			<PostPreview {post} headingLevel="h2" />
 		{/each}
-	</ul>
+	{/if}
 </section>
-
-<style>
-	.posts {
-		display: grid;
-		gap: var(--size-7);
-	}
-
-	.post {
-		max-inline-size: var(--size-content-3);
-		&:not(:last-child) {
-			border-bottom: 1px solid var(--border);
-			padding-bottom: var(--size-7);
-		}
-	}
-
-	.title {
-		font-size: var(--font-size-fluid-3);
-		text-transform: capitalize;
-	}
-
-	.date {
-		color: var(--text-2);
-	}
-
-	.description {
-		margin-top: var(--size-3);
-	}
-</style>

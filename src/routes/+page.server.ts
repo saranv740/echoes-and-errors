@@ -1,8 +1,6 @@
-import type { Post } from "$lib/types";
-import type { PageServerLoadEvent } from "./$types";
+import { getPosts } from "$lib/utils";
 
-export async function load({ fetch }: PageServerLoadEvent) {
-	const response = await fetch("/api/posts");
-	const posts: Post[] = await response.json();
+export async function load() {
+	const posts = await getPosts();
 	return { posts };
 }
