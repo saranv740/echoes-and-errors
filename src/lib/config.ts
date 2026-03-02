@@ -8,6 +8,11 @@ const navLinks: Link[] = [
 		title: "Home",
 	},
 	{
+		text: "About",
+		href: "/about",
+		title: "About me",
+	},
+	{
 		text: "RSS",
 		href: "/rss.xml",
 		title: "RSS Feed",
@@ -21,6 +26,6 @@ export const siteConfig = {
 	navLinks,
 	hero: {
 		title: "Hi there & welcome to my corner of the web!",
-		text: "An Homo sapien who codes...",
+		text: "Software engineer building things on the internet and learning along the way. I write about code, ideas, and the small lessons that stick.",
 	},
 } satisfies SiteConfig;
