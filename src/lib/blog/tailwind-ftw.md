@@ -9,7 +9,7 @@ tags:
 published: true
 ---
 
-![Wind turbine](/blog/post-12.jpg)
+![Wind turbine](/blog/sample/post-12.jpg)
 
 **Note:** This post was created using Chat GPT to demonstrate the features of the _[Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/)_.
 

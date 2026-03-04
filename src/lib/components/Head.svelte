@@ -50,6 +50,8 @@
 	<!-- <meta name="twitter:image:alt" content={resolvedImage.alt} /> -->
 
 	<title>{fullTitle}</title>
+	<link rel="canonical" href={canonicalURL} />
+	<meta name="description" content={description} />
 
 	<link rel="icon" href="/favicon.ico" sizes="any" />
 	<link rel="icon" href="/icon.svg" type="image/svg+xml" />

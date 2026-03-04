@@ -5,24 +5,49 @@ date: "2025-10-21"
 categories:
   - sveltekit
   - svelte
-published: true
+published: false
 ---
 
 <script>
-  import Button from '../components/Button.svelte'
+  import Counter from '../components/blog/Counter.svelte'
 </script>
 
-# Svelte
+### Headings:
 
-## Contents
+# Heading 1
 
-## Intro
+## Heading 2
 
-Hey friends! 👋
+### Heading 3
 
-- this blog is written in markdown file, But rendered as html using [mdsvex](https://github.com/pngwn/MDsveX) and [svelte](https://svelte.dev/)
+#### Heading 4
 
-## Syntax highligting
+##### Heading 5
+
+###### Heading 6
+
+### Ordered List:
+
+1. Item 1
+2. Item 2
+3. Item 3
+
+### Unordered List:
+
+- Item 1
+- Item 2
+- Item 3
+
+### Link:
+
+[mdsvex](https://github.com/pngwn/MDsveX)
+
+### Checkbox:
+
+- [ ] unchecked
+- [x] checked
+
+### Syntax highligting
 
 ```ts
 function greet(name: string) {
@@ -30,16 +55,27 @@ function greet(name: string) {
 }
 ```
 
-## Counter
+- The next word will be `highlighted`
 
-The counter is rendered inside markdown
+### Interactive component
 
-<Button type="button">Email</Button>
+This interactive counter is rendered inside markdown
 
-## Media
+<Counter />
+
+### Media
 
 Media inside the **static** folder is served from `/`.
 
-![Svelte](/opm.png "an image of one punch man")
+![Image Alt](/blog/sample/opm.png "Image title")
+![](/blog/sample/post-12.jpg "Image without alt")
+![Image without title](/blog/sample/opm.png)
 
-<Button type="button">Email</Button>
+### Table
+
+| Column1 | Column2 | Column3 | Column4 |
+| --------------- | --------------- | --------------- | --------------- |
+| Item1.1 | Item2.1 | Item3.1 | Item4.1 |
+| Item1.2 | Item2.2 | Item3.2 | Item4.2 |
+| Item1.3 | Item2.3 | Item3.3 | Item4.3 |
+

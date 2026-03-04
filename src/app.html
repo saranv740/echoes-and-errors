@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		%sveltekit.head%
@@ -6,9 +6,7 @@
 			const theme = localStorage.getItem("color-scheme");
 			if (theme) {
 				document.documentElement.setAttribute("color-scheme", theme);
-				} else {
-					localStorage.setItem("color-scheme", "dark");
-				}
+			}
 		</script>
 	</head>
 	<body class="bg-main text-main" data-sveltekit-preload-data="hover">
