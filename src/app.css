@@ -159,3 +159,7 @@ pre button.copy {
 		}
 	}
 }
+
+code:not(.shiki code) {
+	@apply rounded-sm bg-muted p-0.5;
+}

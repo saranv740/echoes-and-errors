@@ -5,7 +5,7 @@ date: "2025-11-01"
 tags:
   - sveltekit
   - svelte
-published: true
+published: false
 ---
 
 ### How to make blog site using sveltekit ?
