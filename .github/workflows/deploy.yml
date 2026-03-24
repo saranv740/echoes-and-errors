@@ -28,7 +28,7 @@ jobs:
           docker push ${{ secrets.DOCKER_USERNAME }}/echoes-and-errors:latest
 
       - name: SSH into Oracle VM and deploy
-        uses: appleboy/ssh-action@v1.1.0
+        uses: appleboy/ssh-action@v1.2.5
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
