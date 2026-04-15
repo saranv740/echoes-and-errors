@@ -33,8 +33,8 @@ importers:
         specifier: ^3.23.0
         version: 3.23.0
       shiki-transformer-copy-button:
-        specifier: ^0.0.5
-        version: 0.0.5
+        specifier: ^0.0.6
+        version: 0.0.6
       tailwindcss:
         specifier: ^4.2.1
         version: 4.2.1
@@ -1519,8 +1519,8 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shiki-transformer-copy-button@0.0.5:
-    resolution: {integrity: sha512-PQYu6muxUC42ULWIDp2Fq80Mktt7Qy5JAdDHJV5VEEzMIcMcHu1VW8hYo4XLXVFcOwCQBJB7wjH9ImJjoDiD+g==}
+  shiki-transformer-copy-button@0.0.6:
+    resolution: {integrity: sha512-o3DaCvzc58mzWIGiv1qF/RYb72ZjaHhGCD5Vv9xxB+ftcfN7BGis5xrmn1ENpkiy0zI0e0R5alCKClWBQQ7AtA==}
 
   shiki@3.23.0:
     resolution: {integrity: sha512-55Dj73uq9ZXL5zyeRPzHQsK7Nbyt6Y10k5s7OjuFZGMhpp4r/rsLBH0o/0fstIzX1Lep9VxefWljK/SKCzygIA==}
@@ -3009,7 +3009,7 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shiki-transformer-copy-button@0.0.5:
+  shiki-transformer-copy-button@0.0.6:
     dependencies:
       hastscript: 9.0.1
 
