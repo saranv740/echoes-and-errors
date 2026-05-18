@@ -2,7 +2,7 @@
 	import { resolve } from "$app/paths";
 	import type { HeadingLevel, Post } from "$lib/types";
 	import { formatDate } from "$lib/utils";
-	import { ArrowRight } from "lucide-svelte";
+	import { ArrowRight } from "@lucide/svelte";
 
 	interface Props {
 		className?: string;

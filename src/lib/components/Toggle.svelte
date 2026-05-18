@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { fly } from "svelte/transition";
-	import { Moon, Sun } from "lucide-svelte";
+	import { Moon, Sun } from "@lucide/svelte";
 	import { theme } from "$lib/components/Theme.svelte";
 </script>
 
