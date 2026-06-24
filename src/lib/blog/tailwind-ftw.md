@@ -7,6 +7,8 @@ tags:
   - Guide
   - CSS
 published: true
+image: /blog/sample/post-12.jpg
+alt: post-12
 ---
 
 ![Wind turbine](/blog/sample/post-12.jpg)

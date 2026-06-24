@@ -6,9 +6,18 @@
 		description?: string;
 		pageType?: "website" | "article";
 		url: URL;
+		image: string;
+		alt: string;
 	}
 
-	const { title, description = siteConfig.hero.text, pageType = "website", url }: Props = $props();
+	const {
+		title,
+		description = siteConfig.hero.text,
+		pageType = "website",
+		url,
+		image,
+		alt,
+	}: Props = $props();
 
 	// svelte-ignore state_referenced_locally
 	const fullTitle = [title, siteConfig.title].filter(Boolean).join(" | ");
@@ -44,10 +53,10 @@
 	<meta name="twitter:description" content={description} />
 
 	<!-- If image is supplied in future -->
-	<!-- <meta property="og:image" content={resolvedImage.src} /> -->
-	<!-- <meta property="og:image:alt" content={resolvedImage.alt} /> -->
-	<!-- <meta name="twitter:image" content={resolvedImage.src} /> -->
-	<!-- <meta name="twitter:image:alt" content={resolvedImage.alt} /> -->
+	<meta property="og:image" content={image} />
+	<meta property="og:image:alt" content={alt} />
+	<meta name="twitter:image" content={image} />
+	<meta name="twitter:image:alt" content={alt} />
 
 	<title>{fullTitle}</title>
 	<link rel="canonical" href={canonicalURL} />

@@ -7,6 +7,8 @@ export type Post = {
 	date: string;
 	tags: string[];
 	published: boolean;
+	image: string;
+	alt: string;
 };
 
 export interface Link {
