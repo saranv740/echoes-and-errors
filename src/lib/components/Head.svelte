@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { PUBLIC_BASE_URL } from "$env/static/public";
 	import { siteConfig } from "$lib/config";
 
 	interface Props {
@@ -16,7 +17,7 @@
 		pageType = "website",
 		url,
 		image,
-		alt,
+		alt = `${title} alt image`,
 	}: Props = $props();
 
 	// svelte-ignore state_referenced_locally
@@ -36,8 +37,8 @@
 	}
 
 	function getFullImageSrc(src: string) {
-		const fullSrc = `${url.origin}${src}`;
-		console.log("log:url", fullSrc, url);
+		const fullSrc = `${PUBLIC_BASE_URL}${src}`;
+		console.log("log:url", fullSrc);
 		return fullSrc;
 	}
 </script>
@@ -51,16 +52,20 @@
 	<meta property="og:url" content={canonicalURL} />
 	<meta property="og:title" content={fullTitle} />
 	<meta property="og:description" content={description} />
-	<meta property="og:image" content={getFullImageSrc(image)} />
-	<meta property="og:image:alt" content={alt} />
 
 	<!-- twitter meta tags -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:url" content={canonicalURL} />
 	<meta name="twitter:title" content={fullTitle} />
 	<meta name="twitter:description" content={description} />
-	<meta name="twitter:image" content={getFullImageSrc(image)} />
-	<meta name="twitter:image:alt" content={alt} />
+
+	{#if image}
+		{@const src = getFullImageSrc(image)}
+		<meta property="og:image" content={src} />
+		<meta property="og:image:alt" content={alt} />
+		<meta name="twitter:image" content={src} />
+		<meta name="twitter:image:alt" content={alt} />
+	{/if}
 
 	<title>{fullTitle}</title>
 	<link rel="canonical" href={canonicalURL} />
