@@ -25,7 +25,7 @@
 		{@render props.children()}
 	</a>
 {:else}
-	<button onclick={(e)=>{}} {...props} class={[buttonClasses, "cursor-pointer", props.class]}>
+	<button onclick={(e) => {}} {...props} class={[buttonClasses, "cursor-pointer", props.class]}>
 		{@render props.children()}
 	</button>
 {/if}
