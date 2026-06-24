@@ -36,7 +36,8 @@
 	}
 
 	function getFullImageSrc(src: string) {
-		const fullSrc = `${url.protocol}//${url.host}${src}`;
+		const fullSrc = `${url.origin}${src}`;
+		console.log("log:url", fullSrc, url);
 		return fullSrc;
 	}
 </script>

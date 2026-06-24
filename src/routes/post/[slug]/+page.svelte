@@ -27,6 +27,7 @@
 	description={data.meta.description}
 	image={data.meta.image}
 	alt={data.meta.alt}
+	pageType="article"
 />
 
 <article class="mb-16 sm:mb-24">
