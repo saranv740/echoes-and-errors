@@ -38,7 +38,6 @@
 
 	function getFullImageSrc(src: string) {
 		const fullSrc = `${PUBLIC_BASE_URL}${src}`;
-		console.log("log:url", fullSrc);
 		return fullSrc;
 	}
 </script>
