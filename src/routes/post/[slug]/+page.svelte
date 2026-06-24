@@ -21,7 +21,13 @@
 	}
 </script>
 
-<Head url={page.url} title={data.meta.title} description={data.meta.description} />
+<Head
+	url={page.url}
+	title={data.meta.title}
+	description={data.meta.description}
+	image={data.meta.image}
+	alt={data.meta.alt}
+/>
 
 <article class="mb-16 sm:mb-24">
 	<header class="mb-4">
