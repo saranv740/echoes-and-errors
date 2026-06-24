@@ -26,6 +26,6 @@ export const siteConfig = {
 	navLinks,
 	hero: {
 		title: "Hi there & welcome to my corner of the web!",
-		text: "Software engineer building things on the internet and learning along the way. I write about code, ideas, and the small lessons that stick.",
+		text: "Software engineer building things on the internet and learning along the way. I write about code, ideas, and small lessons.",
 	},
 } satisfies SiteConfig;
