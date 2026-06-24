@@ -34,6 +34,11 @@
 		// otherwise, canonical URL always has a trailing slash
 		return path.replace(/\/?$/, hasQueryParams ? "" : "/");
 	}
+
+	function getFullImageSrc(src: string) {
+		const fullSrc = `${url.protocol}//${url.host}${src}`;
+		return fullSrc;
+	}
 </script>
 
 <svelte:head>
@@ -45,17 +50,15 @@
 	<meta property="og:url" content={canonicalURL} />
 	<meta property="og:title" content={fullTitle} />
 	<meta property="og:description" content={description} />
+	<meta property="og:image" content={getFullImageSrc(image)} />
+	<meta property="og:image:alt" content={alt} />
 
 	<!-- twitter meta tags -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:url" content={canonicalURL} />
 	<meta name="twitter:title" content={fullTitle} />
 	<meta name="twitter:description" content={description} />
-
-	<!-- If image is supplied in future -->
-	<meta property="og:image" content={image} />
-	<meta property="og:image:alt" content={alt} />
-	<meta name="twitter:image" content={image} />
+	<meta name="twitter:image" content={getFullImageSrc(image)} />
 	<meta name="twitter:image:alt" content={alt} />
 
 	<title>{fullTitle}</title>
