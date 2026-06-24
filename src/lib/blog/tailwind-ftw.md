@@ -6,7 +6,7 @@ tags:
   - Web
   - Guide
   - CSS
-published: true
+published: false
 image: /blog/sample/post-12.jpg
 alt: post-12
 ---
