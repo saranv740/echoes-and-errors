@@ -49,8 +49,26 @@ To start using Tailwind CSS, follow these steps:
 
 Install Tailwind CSS via npm or yarn:
 
-```bash
+```bash filename=terminal
 npm install tailwindcss
+
+./build/crawler -url=https://learnwebscraping.dev/practice/ecommerce/ -conn=5 -pages=100 -output="output/report.json"
+```
+
+```ts {6-8} filename=src/pages/hello-world.ts
+console.log("hewwo"); // [!code --]
+console.log("hello"); // [!code ++]
+console.log("goodbye");
+console.log("double quote");
+const testString = `blah blah`;
+const getName = () => {
+	let user = {};
+	if (2 % 2 == 0) {
+		if (typeof user === "object") {
+		}
+	}
+	return user.name;
+};
 ```
 
 2. **Configuration:** Create a configuration file (usually named `tailwind.config.js`) to customize the framework's settings.

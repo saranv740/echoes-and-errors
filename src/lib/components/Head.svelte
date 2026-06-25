@@ -7,8 +7,8 @@
 		description?: string;
 		pageType?: "website" | "article";
 		url: URL;
-		image: string;
-		alt: string;
+		image?: string;
+		alt?: string;
 	}
 
 	const {

@@ -10,7 +10,7 @@
 	const hero = siteConfig.hero;
 </script>
 
-<Head url={page.url} />
+<Head url={page.url} pageType="website" />
 
 <section class="mb-12 flex w-full flex-col gap-12">
 	{#if hero.title}
