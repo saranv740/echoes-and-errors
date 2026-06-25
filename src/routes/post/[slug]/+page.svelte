@@ -39,7 +39,7 @@
 	<div class="mb-4 text-sm">
 		<time>{formatDate(data.meta.date)}</time>
 	</div>
-	<div class="prose max-w-none sm:prose-lg">
+	<div class="prose max-w-none sm:prose-lg prose-pre:my-0 prose-pre:p-0">
 		<data.content />
 	</div>
 	<div class="mt-8 flex flex-wrap items-center justify-between gap-6 text-sm sm:mt-12 sm:text-base">

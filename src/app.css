@@ -35,38 +35,6 @@ html.dark,
 	--border-main: #f2f1ec;
 }
 
-/* Cyan */
-/*
-:root {
-    --text-main: #162a2b;
-    --bg-main: #d6e0e2;
-    --bg-muted: #ccd8db;
-    --border-main: #162a2b;
-}
-html.dark {
-    --text-main: #d6e0e2;
-    --bg-main: #162a2b;
-    --bg-muted: #1c3537;
-    --border-main: #d6e0e2;
-}
-*/
-
-/* Green */
-/*
-:root {
-    --text-main: #3a4238;
-    --bg-main: #f3efe6;
-    --bg-muted: #eee9dc;
-    --border-main: #3a4238;
-}
-html.dark {
-    --text-main: #f3efe6;
-    --bg-main: #5e6c5b;
-    --bg-muted: #596756;
-    --border-main: #f3efe6;
-}
-*/
-
 @theme inline {
 	--font-sans: "Inter Variable", sans-serif;
 	--font-serif: "Newsreader Variable", serif;
@@ -111,55 +79,78 @@ html.dark {
 	.prose blockquote {
 		@apply border-none pl-0 font-serif text-[1.375em] leading-snug font-normal italic sm:text-[1.66667em];
 	}
+
+	.prose pre::-webkit-scrollbar {
+		height: 6px;
+		width: 6px;
+	}
+
+	.prose pre::-webkit-scrollbar-track {
+		background-color: black;
+		border-radius: 4px;
+	}
+
+	.prose pre::-webkit-scrollbar-thumb {
+		background-color: rgba(255, 255, 255, 0.3);
+		border-radius: 6px;
+		width: 5px;
+	}
 }
 
 .prose :is(ul) {
 	list-style-type: disc;
 }
 
-pre:has(code) {
-	position: relative;
-}
-
-pre button.copy {
-	position: absolute;
-	right: 16px;
-	top: 16px;
-	height: 28px;
-	width: 28px;
-	padding: 0;
-	display: flex;
-	cursor: pointer;
-
-	& span {
-		width: 100%;
-		aspect-ratio: 1 / 1;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		filter: invert(1);
-	}
-
-	& .ready {
-		background-image: url(/icons/copy.svg);
-	}
-
-	& .success {
-		display: none;
-		background-image: url(/icons/copy-success.svg);
-	}
-
-	&.copied {
-		& .success {
-			display: block;
-		}
-
-		& .ready {
-			display: none;
-		}
-	}
-}
-
 code:not(.shiki code) {
 	@apply rounded-sm bg-muted p-0.5;
+}
+
+.shiki .line.add {
+	@apply inline-block w-full bg-green-400/20;
+}
+.shiki .line.add::before {
+	content: "+ ";
+}
+
+.shiki .line.remove {
+	@apply inline-block w-full bg-red-400/20;
+}
+
+.shiki .line.remove::before {
+	content: "- ";
+}
+
+.shiki .line.highlighted {
+	@apply inline-block w-full bg-white/10;
+}
+
+.code-block-container {
+	@apply my-[2em] rounded-md bg-muted md:my-[1.7142857em];
+	border: 1px solid #4b4b52;
+}
+
+.code-block-container pre {
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	padding: 8px 16px;
+}
+
+.code-block-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4px 8px 4px 16px;
+	opacity: 0.8;
+}
+
+.code-block-header p {
+	margin: 0;
+}
+
+.code-filename {
+	@apply text-sm;
+}
+
+.code-block-header .code-copy-button {
+	@apply cursor-pointer rounded-md bg-transparent p-1.5 text-xs;
 }
