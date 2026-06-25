@@ -105,10 +105,10 @@ code:not(.shiki code) {
 	@apply rounded-sm bg-muted p-0.5;
 }
 
-.shiki .diff.add {
+.shiki .line.add {
 	@apply inline-block w-full bg-green-400/20;
 }
-.shiki .diff.add::before {
+.shiki .line.add::before {
 	content: "+ ";
 }
 
