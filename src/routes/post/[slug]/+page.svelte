@@ -1,11 +1,10 @@
 <script lang="ts">
-	import { page } from "$app/state";
 	import Button from "$lib/components/Button.svelte";
 	import Head from "$lib/components/Head.svelte";
 	import { formatDate } from "$lib/utils";
 	import type { PageProps } from "./$types";
 
-	let { data }: PageProps = $props();
+	let { data, params }: PageProps = $props();
 
 	async function copyLink(e: MouseEvent) {
 		const button = e.target as HTMLButtonElement;
@@ -22,7 +21,7 @@
 </script>
 
 <Head
-	url={page.url}
+	url={`/post/${params.slug}`}
 	title={data.meta.title}
 	description={data.meta.description}
 	image={data.meta.image}

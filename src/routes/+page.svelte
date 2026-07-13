@@ -3,14 +3,13 @@
 	import { siteConfig } from "$lib/config";
 	import PostPreview from "$lib/components/PostPreview.svelte";
 	import Head from "$lib/components/Head.svelte";
-	import { page } from "$app/state";
 	import Button from "$lib/components/Button.svelte";
 
 	let { data }: PageProps = $props();
 	const hero = siteConfig.hero;
 </script>
 
-<Head url={page.url} pageType="website" />
+<Head url="/" image="/hero-image.jpg" pageType="website" />
 
 <section class="mb-12 flex w-full flex-col gap-12">
 	{#if hero.title}
