@@ -6,7 +6,7 @@
 		title?: string;
 		description?: string;
 		pageType?: "website" | "article";
-		url: URL;
+		url: string;
 		image?: string;
 		alt?: string;
 	}
@@ -23,20 +23,9 @@
 	// svelte-ignore state_referenced_locally
 	const fullTitle = [title, siteConfig.title].filter(Boolean).join(" | ");
 	// svelte-ignore state_referenced_locally
-	const canonicalURL = formatCanonicalURL(url);
+	const canonicalURL = getFullSrc(url);
 
-	function formatCanonicalURL(url: URL) {
-		const path = url.toString();
-		const hasQueryParams = path.includes("?");
-		// If there are query params, make sure the URL has no trailing slash
-		if (hasQueryParams) {
-			path.replace(/\/?$/, "");
-		}
-		// otherwise, canonical URL always has a trailing slash
-		return path.replace(/\/?$/, hasQueryParams ? "" : "/");
-	}
-
-	function getFullImageSrc(src: string) {
+	function getFullSrc(src: string) {
 		const fullSrc = `${PUBLIC_BASE_URL}${src}`;
 		return fullSrc;
 	}
@@ -51,6 +40,8 @@
 	<meta property="og:url" content={canonicalURL} />
 	<meta property="og:title" content={fullTitle} />
 	<meta property="og:description" content={description} />
+	<meta property="og:site_name" content="Echoes and Errors" />
+	<meta property="og:locale" content="en_IN" />
 
 	<!-- twitter meta tags -->
 	<meta name="twitter:card" content="summary_large_image" />
@@ -59,9 +50,11 @@
 	<meta name="twitter:description" content={description} />
 
 	{#if image}
-		{@const src = getFullImageSrc(image)}
+		{@const src = getFullSrc(image)}
 		<meta property="og:image" content={src} />
 		<meta property="og:image:alt" content={alt} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
 		<meta name="twitter:image" content={src} />
 		<meta name="twitter:image:alt" content={alt} />
 	{/if}
