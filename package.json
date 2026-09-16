@@ -48,7 +48,7 @@
 		"rehype-slug": "^6.0.0",
 		"remark-toc": "^9.0.0",
 		"shiki": "^4.4.3",
-		"tailwindcss": "^4.3.1"
+		"tailwindcss": "^4.3.3"
 	},
 	"overrides": {
 		"vite-plugin-devtools-json": {
